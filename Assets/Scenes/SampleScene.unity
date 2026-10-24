@@ -370,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   boxesParent: {fileID: 1946165974}
   victoryText: {fileID: 766592109}
+  gameOverText: {fileID: 1833216382}
 --- !u!1 &330545355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,7 +1701,7 @@ GameObject:
   - component: {fileID: 1558319266}
   m_Layer: 0
   m_Name: Oponent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1856,7 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   player: {fileID: 1909767921}
-  moveSpeed: 200
+  moveSpeed: 300
   boardRenderer: {fileID: 1888335515}
   gridWidth: 6
   gridHeight: 6
@@ -2388,6 +2389,7 @@ GameObject:
   - component: {fileID: 1909767923}
   - component: {fileID: 1909767924}
   - component: {fileID: 1909767925}
+  - component: {fileID: 1909767926}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2570,6 +2572,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   hammerAnimator: {fileID: 1190592556}
+--- !u!114 &1909767926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909767919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa8c95a5067b8c438d86993d7cb650f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
+  gameManager: {fileID: 192156273}
 --- !u!1 &1946165973
 GameObject:
   m_ObjectHideFlags: 0
