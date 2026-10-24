@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text victoryText;
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private GameObject restartButton;
+    [SerializeField] private GameObject exitButton;
 
     private bool gameEnded;
     public bool IsGameEnded => gameEnded;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         victoryText.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(false);
         restartButton.SetActive(false);
+        exitButton.SetActive(false);
     }
 
     private void Update()
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour
         message.text = text;
         message.gameObject.SetActive(true);
         restartButton.SetActive(true);
+        exitButton.SetActive(true);
 
         Time.timeScale = 0f;
     }
@@ -66,5 +69,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(
             SceneManager.GetActiveScene().buildIndex
         );
+    }
+    
+    public void ExitGame()
+    {
+        Debug.Log("Exiting game...");
+        Application.Quit();
     }
 }
